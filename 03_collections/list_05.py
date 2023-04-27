@@ -11,8 +11,9 @@ people = [
 
 print('---------')
 
-for row in people:
-    for id, elem in enumerate(row):
+
+for person in people:
+    for id, elem in enumerate(person):
         if id == 1:
             print(elem, end=" - ")
         else:
