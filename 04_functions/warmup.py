@@ -8,9 +8,24 @@ def add_books(number):
 
     return library
 
+
+def get_book(library):
+    library = list(library.items())
+    size = len(library)
+
+    while True:
+        number = int(input(f"Podaj numer ksiazki do sprawdzenia (od 1 do {size}):"))
+        if number > size or number < 1:
+            print("Nie ma takiej ksiazki, sprobuj jeszcze raz")
+        else:
+            break
+
+    title, review = library[number-1]
+    print(f'Ksiazka pt "{title}" ma ocene {review}')
+
+
 # ---- glowna czesc
 counter = int(input("Ile książek chcesz dodać"))
 data = add_books(counter)
 print(data)
-# shelf = list(data.items())
-# print(shelf)
+get_book(data)
