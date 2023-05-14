@@ -3,11 +3,14 @@ import random
 # słownik wygrany: przegrany
 
 WINNERS = {
-    'k': 'n',
-    'n': 'p',
-    'p': 'k'
+    'k': ('n', 'j'),
+    'n': ('p', 'j'),
+    'p': ('k', 's'),
+    'j': ('p', 's'),
+    's': ('n', 'k')
 }
-CORRECT_VALUES = ['k', 'n', 'p']
+
+CORRECT_VALUES = ['k', 'n', 'p', 'j', 's']
 
 def get_comp_choice():
     return random.choice(CORRECT_VALUES)
@@ -16,9 +19,11 @@ def get_comp_choice():
 def get_user_choice():
     while True:
         user_choice = input("""Podaj wartość:
-                    k - kamień
-                    n - nożyce
-                    p - papier 
+                k - kamień
+                n - nożyce
+                p - papier
+                j - jaszczuka
+                s - Spock
         -> """)
 
         if user_choice in CORRECT_VALUES:
