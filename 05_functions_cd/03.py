@@ -58,4 +58,5 @@ def main():
 
     print("*** Dzięki za grę! *** ")
 
+
 main()
