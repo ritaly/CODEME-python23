@@ -1,18 +1,20 @@
 import random
-
 def get_content():
-    with open('quotes.txt') as fopen:
+    filename = input('Podaj nazwe pliku (bez rozszerzenia txt)')
+    with open(f'{filename}.txt') as fopen:
         content = fopen.readlines()
 
     return content
 
 
 def show(quote):
+    txt, author = quote.split(' - ')
     print('Quote of the day is:')
     print()
-    width = 60
+    width = 70
     print('*' * width)
-    print(quote.strip().center(width))
+    print(txt.center(width))
+    print(author.strip().center(width))
     print('*' * width)
 
 
