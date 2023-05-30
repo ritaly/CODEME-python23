@@ -1,10 +1,14 @@
 import random
 def get_content():
-    filename = input('Podaj nazwe pliku (bez rozszerzenia txt)')
-    with open(f'{filename}.txt') as fopen:
-        content = fopen.readlines()
+    while True:
+        filename = input('Podaj nazwe pliku (bez rozszerzenia txt)')
 
-    return content
+        try:
+            with open(f'{filename}.txt') as fopen:
+                content = fopen.readlines()
+                return content
+        except FileNotFoundError:
+            print("Nie ma takiego pliku, spróbuj jeszcze raz!")
 
 
 def show(quote):
