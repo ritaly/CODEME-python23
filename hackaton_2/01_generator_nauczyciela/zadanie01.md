@@ -29,7 +29,8 @@ Zapisz go jako `students.csv`.
 
 
 ### Etap 3: 
-Wewnątrz skryptu stwórz funkcję, która będzie pobierać dane z pliku .csv. Zwróć uwagę, że plik csv używa znaku podziału.
+Wewnątrz skryptu stwórz funkcję, która będzie pobierać dane z pliku .csv. 
+Zwróć uwagę, że plik csv, to zwykły plik tekstowy, który używa określonego znaku podziału.
 
 Funkcja ma:
 - Prawidłowo odczytać plik 

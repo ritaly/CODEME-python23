@@ -6,9 +6,9 @@ Przypomnij sobie zadanie z pierwszego hackatonu
 > - Konieczność użycia modułu `random`.
 > - Program wypisuje kolejne "przygody" bohatera.
 > - Przygody są zdefiniowanymi zdaniami, które będą losowo wypełniane odpowiednimi wyrazami, np: "(bohater) poszedł do (miejsce) aby (czasownik)." może stać się "Vohenal V Waleczny poszedł do tawerny aby zasnąć."
-> - Historyjka ma mieć zadaną długość i ma być możliwie losowa.
+> - Historyjka ma mieć zadaną długość i ma być możliwie losowa.
 
-Jeżeli zadanie zostało zrobione na hackatonie 1, można wykorzystać jego kod.
+Jeżeli zadanie zostało zrobione na hackatonie 1, można wykorzystać jego kod.
 
 Przygody bohatera opisuj po angielsku, by uniknąć problemów leksykalnych.
 
@@ -29,10 +29,12 @@ https://spyze.pl/Rayneven/
 
 ### Etap 1:
 Stwórz - bohatera:
-- Użytkownik może podać płeć wojownika, rasę oraz imię lub je wylosować z listy.
+- Użytkownik może podać płeć wojownika oraz imię lub je wylosować z listy.
 - Generator imion bohatera powinen brać pod uwagę płeć bohatera oraz rasę i zwracać wygenerowane imię zgodnie z założoną konwencją.
 - Generator imion powinen znajdować sie w oddzielnym module.
 - Bohater powinen mieć dostępny ekwipunek oraz 10 stopniowy poziom energii. Sposób implamentacji dobierz na podstawie całości.
+
+_Inne rozszerzenia to np. rasa wojownika, która mogłaby wpłynąć na generaor imię_
 
 ### Etap 2:
 Wewnątrz skryptu stwórz funkcję, która wyświetlać menu główne.
@@ -47,7 +49,7 @@ Wewnątrz skryptu stwórz funkcję, która wyświetlać menu główne.
 ### Etap 3: 
 Stwórz logikę poruszania się po grze.
 - Przygody bohatera powinny odbywać w sposób bardziej kontrollowany 
-- Bohater powinen móc odwiedzić conajmniej 5 różnych lokalizacji, w których będzie mógł odbyć różne akcje i od nich będzie zależała rozgrywka
+- Bohater powinen móc odwiedzić conajmniej 4 różnych lokalizacji, w których będzie mógł odbyć różne akcje i od nich będzie zależała rozgrywka
 - Osobna funkcja powinna być odpowiedzialna za budowanie zdań
 
 Bohater wybiera z menu opcję podróży do miasta lub lasu - wybór: miasto.
