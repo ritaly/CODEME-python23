@@ -9,3 +9,6 @@ This repository contains code from the classes and homework the Python Beginners
 - Lesson 04 - Functions
 - Lesson 05 - Functions practise
 - Lesson 06 - Working with files 
+- Lesson 07 - Modules 
+- Lesson 08 - Exceptions
+- Lesson 09 - Algorithms 
