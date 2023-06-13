@@ -3,8 +3,8 @@ from abc import ABC, abstractmethod
 
 #Utwórz klasę abstrakcyjną
 class PaymentMethod():
-    pass
-
+    def process_payment(self, amount: float) -> bool:
+    def refund_payment(self, amount: float) -> bool:
 
 class CreditCardPayment(PaymentMethod):
     def process_payment(self, amount: float) -> bool:
