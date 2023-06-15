@@ -7,28 +7,45 @@ class Student:
         self.name = name
         self.last = last
         self.age = age
-        self.student_avg = student_avg
 
     def __str__(self):
         return self.name.capitalize() + " " + self.last.capitalize()
 
+
+    @property
     def email(self):
-        return f'{self.last.lower()}.{self.name[0].lower()}@university.com'
+        return f'{self.last.lower()}.{self.name[0].lower()}@uam.com'
 
-    def grand_scholarship(self):
-        if self.student_avg >= self.min_avg:
-            print('Przyznano stypendium')
-        else:
-            print('Odmowa przyznania stypendium')
+    @property
+    def fullname(self):
+        return f'{self.last} {self.name}'
 
-    @classmethod
-    def set_min_avg(cls, new_min_avg):
-        cls.min_avg = new_min_avg
 
-    @staticmethod
-    def is_academic_day(day):
-        if day.weekday() == 5 or day.weekday() == 6 or day in holidays.PL() :
-            return False
-        else:
-            return True
+    @fullname.setter
+    def fullname(self, last_first):
+        self.last, self.name = last_first.split()
+
+    @fullname.deleter
+    def fullname(self):
+        self.last = 'Usuniete nazwisko'
+        self.name = 'Usuniete imię'
+        print('Usunięcie udało się!')
+
+    #
+    # def grand_scholarship(self):
+    #     if self.student_avg >= self.min_avg:
+    #         print('Przyznano stypendium')
+    #     else:
+    #         print('Odmowa przyznania stypendium')
+    #
+    # @classmethod
+    # def set_min_avg(cls, new_min_avg):
+    #     cls.min_avg = new_min_avg
+    #
+    # @staticmethod
+    # def is_academic_day(day):
+    #     if day.weekday() == 5 or day.weekday() == 6 or day in holidays.PL() :
+    #         return False
+    #     else:
+    #         return True
 
