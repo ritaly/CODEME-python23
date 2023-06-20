@@ -1,15 +1,28 @@
+def is_numeric(*values):
+    numeric_types = (int, float)
+
+    for v in values:
+        if not isinstance(v, numeric_types):
+            raise ValueError(f'{v} musi być wartością numeryczną!')
+
+
 def rectangle(a, b):
     numeric_types = (int, float)
-    if not isinstance(a, numeric_types) or not isinstance(b, numeric_types):
-        raise ValueError('Bok musi być wartością numeryczną!')
+    is_numeric(a, b)
 
     return a * b
 
 
 def triangle(a, h):
-  return 0.5 * a * h
+    numeric_types = (int, float)
+    is_numeric(a, h)
+
+    return 0.5 * a * h
 
 def trapezoid(a,b,h):
+    numeric_types = (int, float)
+    is_numeric(a, b, h)
+
     return (a + b) * h * 0.5
 
 def main():

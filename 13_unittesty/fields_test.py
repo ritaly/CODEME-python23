@@ -20,10 +20,18 @@ class FieldsTestCase(unittest.TestCase):
         result = triangle(self.a, self.b)
         self.assertEqual(result, 25)
 
+    def test_triagle_with_incorrect_values(self):
+        with self.assertRaises(ValueError):
+            triangle(self.a, "incorrect value")
+
     def test_trapezoid_with_correct_values(self):
         result = trapezoid(self.a, self.b, self.h)
         expected_result = 37.5
         self.assertEqual(result, expected_result)
+
+    def test_trpezoid_with_incorrect_values(self):
+        with self.assertRaises(ValueError):
+            trapezoid(self.a, self.b, "incorrect value")
 
     def tearDown(self):
         del self.a
