@@ -2,10 +2,11 @@ import unittest
 from fields import rectangle, triangle, trapezoid
 
 class FieldsTestCase(unittest.TestCase):
-    def setUp(self):
-        self.a = 10
-        self.b = 5
-        self.h = 5
+    @classmethod
+    def setUpClass(cls):
+        cls.a = 10
+        cls.b = 5
+        cls.h = 5
 
     def test_rectangle_with_correct_values(self):
         result = rectangle(self.a, self.b)
@@ -33,9 +34,11 @@ class FieldsTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             trapezoid(self.a, self.b, "incorrect value")
 
-    def tearDown(self):
-        del self.a
-        del self.b
+    @classmethod
+    def tearDownClass(cls):
+        del cls.a
+        del cls.b
+        del cls.h
 
 
 if __name__ == '__main__':

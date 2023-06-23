@@ -5,6 +5,7 @@ class Student:
         self.name = name
         self.last = last
         self.student_avg = student_avg
+        self.scholarship = None
 
     @property
     def fullname(self):
